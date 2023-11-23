@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --light: #37c037;
+            --dark: #229c22;
+            --lighttheme: #f3f3f3;
+            --darktheme: #1f1f1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial';
+            color: white;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--lighttheme);
+            transition: .2s;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            padding: 1.5rem;
+            font-size: 2rem;
+            border-radius: 3rem;
+            background-color: var(--light);
+            box-shadow: 0 8px 0 0 var(--dark);
+            transition: .2s;
+        }
+
+        button:hover {
+            box-shadow: 0 6px 0 0 var(--dark);
+            transform: translateY(2px);
+        }
+
+        button:active {
+            box-shadow: 0 0 0 0 var(--dark);
+            transform: translateY(8px);
+        }
+
+        .color-selector {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100%;
+            background-color: var(--light);
+        }
+
+        .color-selector input {
+            background: none;
+            border: none;
+            border-radius: 10rem;
+            width: 75%;
+            height: 75%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .color-selector i {
+            position: absolute;
+            font-size: 2.5rem;
+            pointer-events: none;
+            transform: translateX(3px);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 1rem;
+            bottom: 7rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100%;
+            background-color: var(--darktheme);
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .theme-toggle i {
+            position: absolute;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        Cliccami!
+    </button>
+    <div class="color-selector centered">
+        <input id="colorInput" type="color" name="" id="">
+        <i class="bi bi-paint-bucket"></i>
+    </div>
+    <div class="theme-toggle centered">
+        <i class="bi bi-moon"></i>
+    </div>
+
+    <script>
+        const colorInput = document.getElementById('colorInput');
+        const r = document.querySelector(':root');
+        const themeToggle = document.querySelector('.theme-toggle');
+        let theme = 'light';
+
+        colorInput.addEventListener('input', function () {
+            r.style.setProperty('--light', colorInput.value);
+            r.style.setProperty('--dark', LightenDarkenColor(colorInput.value, -50));
+        });
+
+        themeToggle.addEventListener('click',function(){
+            if(theme == 'light'){
+                theme = 'dark';
+                document.body.style.backgroundColor = 'var(--darktheme)';
+                themeToggle.style.backgroundColor = 'var(--lighttheme)';
+                themeToggle.querySelector('i').style.color = 'var(--darktheme)';
+            }
+            else{
+                theme = 'light';
+                document.body.style.backgroundColor = 'var(--lighttheme)';
+                themeToggle.style.backgroundColor = 'var(--darktheme)';
+                themeToggle.querySelector('i').style.color = 'var(--lighttheme)';
+            }
+        });
+
+        function LightenDarkenColor(col, amt) {
+            var usePound = false;
+            if (col[0] == "#") {
+                col = col.slice(1);
+                usePound = true;
+            }
+
+            var num = parseInt(col, 16);
+
+            var r = (num >> 16) + amt;
+
+            if (r > 255) r = 255;
+            else if (r < 0) r = 0;
+
+            var b = ((num >> 8) & 0x00FF) + amt;
+
+            if (b > 255) b = 255;
+            else if (b < 0) b = 0;
+
+            var g = (num & 0x0000FF) + amt;
+
+            if (g > 255) g = 255;
+            else if (g < 0) g = 0;
+
+            return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+        }
+    </script>
+</body>
+
+</html>

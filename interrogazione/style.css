@@ -1,6 +1,6 @@
 :root {
     --green: #317413;
-    --red: #de0012
+    --red: #de0012;
 }
 
 * {
@@ -60,13 +60,35 @@ body.inglese {
 
 button {
     color: white;
-    background-color: #317413;
+    background-color: var(--green);
     font-size: 2rem;
     padding: 1rem 2rem;
     border: none;
     border-radius: 5rem;
     margin: .5rem;
     cursor: pointer;
+    box-shadow: 0 8px 0 0 #1c410b;
+    transition: transform .2s, box-shadow .2s;
+}
+
+button:active{
+    box-shadow: 0 0 0 0 #1c410b;
+    transform: translateY(8px);
+}
+
+.red {
+    background-color: var(--red);
+    box-shadow: 0 8px 0 0 #74000a;
+}
+
+button.red:active{
+    box-shadow: 0 0 0 0 #1c410b;
+    transform: translateY(8px);
+}
+
+button.disabled {
+    pointer-events: none;
+    filter: saturate(.5) brightness(.5);
 }
 
 .hidden {
@@ -76,15 +98,6 @@ button {
 h1 {
     text-align: center;
     font-size: 5rem;
-}
-
-.red {
-    background-color: var(--red)
-}
-
-button.disabled {
-    pointer-events: none;
-    filter: saturate(.5) brightness(.5);
 }
 
 .subjects {

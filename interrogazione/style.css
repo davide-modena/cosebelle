@@ -123,10 +123,6 @@ button.disabled {
     cursor: pointer;
 }
 
-.subjects>div:last-child {
-    margin: 0;
-}
-
 .subjects>div.active {
     color: goldenrod;
     border-color: goldenrod;
@@ -183,10 +179,5 @@ button.disabled {
         justify-content: center;
         border: 2px solid white;
         cursor: pointer;
-    }
-
-    .subjects>div:last-child {
-        margin-bottom: .2rem;
-        margin-right: .5rem;
     }
 }

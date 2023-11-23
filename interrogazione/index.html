@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/60/60879.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="storia">
+    <div class="container">
+        <h1 id="nome"></h1>
+        <button id="interroga" class="hidden">Interroga</button>
+        <button id="genera">Genera</button>
+    </div>
+    <div class="subjects">
+        <div class="active">STO</div>
+        <div>IT</div>
+        <div>TPSIT</div>
+        <div>SIR</div>
+        <div>MAT</div>
+        <div>INFO</div>
+        <div>ING</div>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script>
+        const alunni = [
+            'Andreolli',
+            'Baroni',
+            'Bassi',
+            'Bezzi',
+            'Bragagna',
+            'Brandolini',
+            'Chini',
+            'Conci',
+            'De Lucia',
+            'Dei Rossi',
+            'Elastici',
+            'Facchinelli',
+            'Fedrizzi',
+            'Fraccaroli',
+            'Grossi',
+            'Manfredi',
+            'Modena',
+            'Nones',
+            'Plotegher',
+            'Rodler',
+            'Zattara'
+        ];
+
+        const subjectsDict = {
+            "STO": "storia",
+            "IT": "italiano",
+            "TPSIT" : "tpsit",
+            "SIR" : "sistemi",
+            "MAT" : "matematica",
+            "INFO" : "informatica",
+            "ING" : "inglese"
+        }
+
+        const generaButton = document.getElementById('genera');
+        const interrogaButton = document.getElementById('interroga');
+        const nome = document.getElementById('nome');
+
+        generaButton.addEventListener('click', function () {
+            nome.innerHTML = alunni[Math.floor(Math.random() * alunni.length)]
+            generaButton.classList.add('red');
+            generaButton.innerHTML = 'Rigenera';
+            interrogaButton.classList.remove('hidden');
+        })
+
+        interrogaButton.addEventListener('click', function () {
+            nome.innerHTML = "";
+            interrogaButton.classList.add('hidden');
+            generaButton.classList.remove('red');
+            generaButton.innerHTML = 'Genera';
+        })
+
+        const subjectsContainer = document.querySelector('.subjects');
+        const subjects = document.querySelectorAll('.subjects > div');
+        subjects.forEach(function (e) {
+            e.addEventListener('click', function () {
+                e.classList.add('active');
+                subjectsContainer.classList.toggle('open');
+                document.body.classList = [];
+                document.body.classList.add(subjectsDict[e.innerHTML]);
+
+                subjects.forEach(function (sibling) {
+                    if (sibling !== e) {
+                        sibling.classList.remove('active');
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>

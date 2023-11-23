@@ -29,7 +29,7 @@ body.storia {
 }
 
 body.italiano {
-    background-image: url(https://www.sololibri.net/IMG/arton150825.png);
+    background-image: url(https://www.focusjunior.it/content/uploads/2021/01/Dante-Alighieri.jpg);
 }
 
 body.tpsit {
@@ -37,7 +37,7 @@ body.tpsit {
 }
 
 body.sistemi {
-    background-image: url(https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 body.matematica {
@@ -129,6 +129,16 @@ button.disabled {
     order: -1;
 }
 
+.overlay{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #00000099;
+    pointer-events: none;
+    z-index: -1;
+}
+
 @media (max-width: 575px) {
     button {
         font-size: 1.2rem;
@@ -139,7 +149,7 @@ button.disabled {
         cursor: pointer;
     }
 
-    h1{
+    h1 {
         font-size: 3rem;
     }
 
@@ -179,5 +189,11 @@ button.disabled {
         justify-content: center;
         border: 2px solid white;
         cursor: pointer;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .overlay{
+        display: block;
     }
 }

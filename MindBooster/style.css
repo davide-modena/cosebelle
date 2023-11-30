@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(33, 31, 34);
+}
+
+select, input{
+    /* padding: 1rem 3rem 1rem 1rem; */
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 1rem;
+    /* appearance: none;
+    background-image: url(chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 1.5rem; */
+    /* background: none; */
+    /* color: white; */
+    border: 1px solid white;
+}
+
+button{
+    background: none;
+    color: white;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid white;
+}
+
+#result{
+    bottom: 10rem;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    max-width: 80rem;
+}

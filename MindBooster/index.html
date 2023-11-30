@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPrime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <select name="subjects" id="subjects">
+            <option value="storia">Storia</option>
+            <option value="italiano">Italiano</option>
+            <option value="matematica">Matematica</option>
+        </select>
+        <select name="topics" id="topics">
+            <option value="prima guerra mondiale">Prima Guerra Mondiale</option>
+            <option value="giolitti">Giolitti</option>
+            <option value="decadentismo">Decadentismo</option>
+        </select>
+        <select name="questions" id="questions">
+            <option value="domande aperte">Domande aperte</option>
+            <option value="quiz">Quiz</option>
+            <option value="vero o falso">Vero o falso</option>
+        </select>
+        <input type="number" name="quantity" id="quantity" placeholder="Inserisci la quantità...">
+        <select name="level" id="level">
+            <option value="superiori">Superiori</option>
+            <option value="asilo">Asilo</option>
+            <option value="elementari">Elementari</option>
+            <option value="medie">Medie</option>
+            <option value="università">Università</option>
+        </select>
+    </form>
+    <button onclick="generatePrompt()">Genera</button>
+    <div id="result"></div>
+
+    <script>
+        function generatePrompt(){
+            let prompt = "";
+            let subjects = document.getElementById('subjects').value;
+            let topics = document.getElementById('topics').value;
+            let questions = document.getElementById('questions').value;
+            let quantity = document.getElementById('quantity').value;
+            let level = document.getElementById('level').value;
+
+            if (quantity == ""){
+                quantity = 5;
+            }
+
+            const result = document.getElementById('result');
+
+            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento "${topics}" di livello ${level}. Il tipo di domande è: ${questions}. Cerca di organizzare queste domande in un JSON, indicando la domanda, le opzioni e la risposta giusta`;
+
+            result.innerHTML = prompt;
+        }
+    </script>
+</body>
+</html>

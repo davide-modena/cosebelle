@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyPrime</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <form>
         <select name="subjects" id="subjects">
@@ -33,10 +35,10 @@
         </select>
     </form>
     <button onclick="generatePrompt()">Genera</button>
-    <div id="result"></div>
+    <div id="result" onclick="copyToClipboard(this.innerHTML)"></div>
 
     <script>
-        function generatePrompt(){
+        function generatePrompt() {
             let prompt = "";
             let subjects = document.getElementById('subjects').value;
             let topics = document.getElementById('topics').value;
@@ -44,7 +46,7 @@
             let quantity = document.getElementById('quantity').value;
             let level = document.getElementById('level').value;
 
-            if (quantity == ""){
+            if (quantity == "") {
                 quantity = 5;
             }
 
@@ -54,6 +56,24 @@
 
             result.innerHTML = prompt;
         }
+
+        function copyToClipboard(textToCopy) {
+            // Crea un elemento textarea per inserire il testo da copiare
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+
+            // Seleziona il testo nell'elemento textarea
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); // Per supportare browser diversi
+
+            // Copia il testo selezionato nella clipboard
+            document.execCommand('copy');
+
+            // Rimuovi l'elemento textarea poiché ora il testo è nella clipboard
+            document.body.removeChild(textArea);
+        }
     </script>
 </body>
+
 </html>

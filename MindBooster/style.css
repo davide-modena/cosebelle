@@ -15,6 +15,10 @@ body {
     background-color: rgb(33, 31, 34);
 }
 
+form{
+    display: block;
+}
+
 select, input{
     /* padding: 1rem 3rem 1rem 1rem; */
     padding: 1rem;
@@ -47,4 +51,7 @@ button{
     color: white;
     font-size: 3rem;
     max-width: 80rem;
+    cursor: copy;
+    border: 1px solid white;
+    padding: 1rem;
 }

@@ -37,6 +37,9 @@
     <button onclick="generatePrompt()">Genera</button>
     <div id="result" onclick="copyToClipboard(this.innerHTML)"></div>
 
+    <textarea name="jsonArea" id="jsonArea" cols="30" rows="10" placeholder="Metti il JSON qui"></textarea>
+    <button id="sendBtn" onclick="sendToPage()">Manda</button>
+
     <script>
         function generatePrompt() {
             let prompt = "";

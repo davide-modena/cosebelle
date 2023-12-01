@@ -7,12 +7,18 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(33, 31, 34);
+}
+
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form{
@@ -49,9 +55,85 @@ button{
     bottom: 10rem;
     position: absolute;
     color: white;
-    font-size: 3rem;
+    font-size: 2vw;
     max-width: 80rem;
     cursor: copy;
     border: 1px solid white;
     padding: 1rem;
 }
+
+/* Quiz */
+.quiz-container {
+    width: 80%;
+    height: 60%;
+}
+
+.question{
+    color: white;
+    position: relative;
+    top: -5rem;
+    font-size: 3rem;
+}
+
+.quiz-container .options{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.quiz-container .options div{
+    width: calc(50% - 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.quiz-container .options div.selected{
+    outline: 3px solid white;
+}
+
+.quiz-container .options div:nth-child(1){
+    background-color: #e21a3b;
+}
+.quiz-container .options div:nth-child(2){
+    background-color: #1368ce;
+}
+.quiz-container .options div:nth-child(3){
+    background-color: #d89e01;
+}
+.quiz-container .options div:nth-child(4){
+    background-color: #278f0e;
+}
+
+.quiz-container .buttons{
+    margin-top: 2rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+.quiz-container .buttons button{
+    width: calc(50% - 1rem);
+    border-radius: 1rem;
+    border: none;
+    background-color: #864cbf;
+}
+
+.quiz-container .options .esito{
+    width: 100%;
+}
+
+/* .quiz-container .buttons button:nth-child(1){
+    background-color: #1368ce;
+}
+
+.quiz-container .buttons button:nth-child(2){
+    background-color: #1368ce;
+} */

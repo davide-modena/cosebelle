@@ -1,0 +1,814 @@
+        // const jsonFile = {
+        //     "domande_decadentismo": [
+        //         {
+        //             "domanda": "Chi è considerato il principale esponente del Decadentismo in Italia?",
+        //             "opzioni": [
+        //                 "Giovanni Pascoli",
+        //                 "Gabriele D'Annunzio",
+        //                 "Ugo Foscolo",
+        //                 "Giosuè Carducci"
+        //             ],
+        //             "risposta": "Gabriele D'Annunzio"
+        //         },
+        //         {
+        //             "domanda": "Qual è uno dei principali temi trattati nella letteratura decadente?",
+        //             "opzioni": [
+        //                 "L'ottimismo e la fiducia nell'umanità",
+        //                 "La celebrazione della vita semplice",
+        //                 "La decadenza morale e sociale",
+        //                 "Il ritorno ai valori classici"
+        //             ],
+        //             "risposta": "La decadenza morale e sociale"
+        //         },
+        //         {
+        //             "domanda": "Qual è il termine con cui si identifica il movimento artistico e letterario contrario al Decadentismo?",
+        //             "opzioni": [
+        //                 "Futurismo",
+        //                 "Naturalismo",
+        //                 "Realismo",
+        //                 "Simbolismo"
+        //             ],
+        //             "risposta": "Naturalismo"
+        //         },
+        //         {
+        //             "domanda": "Qual è il significato del termine 'decadentismo' nel contesto letterario?",
+        //             "opzioni": [
+        //                 "Decadimento delle tradizioni culturali",
+        //                 "Rinascita delle arti classiche",
+        //                 "Esaltazione dell'industrializzazione",
+        //                 "Rispetto per l'ordine sociale"
+        //             ],
+        //             "risposta": "Decadimento delle tradizioni culturali"
+        //         },
+        //         {
+        //             "domanda": "In che periodo storico si sviluppò il movimento decadentista in Italia?",
+        //             "opzioni": [
+        //                 "Fine del XIX secolo",
+        //                 "Alto Medioevo",
+        //                 "Rinascimento",
+        //                 "Età Contemporanea"
+        //             ],
+        //             "risposta": "Fine del XIX secolo"
+        //         },
+        //         {
+        //             "domanda": "Qual è il titolo di una delle opere più famose di Gabriele D'Annunzio, considerata un'icona del Decadentismo?",
+        //             "opzioni": [
+        //                 "'Il fu Mattia Pascal'",
+        //                 "'La coscienza di Zeno'",
+        //                 "'Le vergini delle rocce'",
+        //                 "'Il piacere'"
+        //             ],
+        //             "risposta": "'Il piacere'"
+        //         },
+        //         {
+        //             "domanda": "Quali sentimenti dominano spesso le opere decadentiste?",
+        //             "opzioni": [
+        //                 "Allegria e spensieratezza",
+        //                 "Speranza e ottimismo",
+        //                 "Malinconia e angoscia",
+        //                 "Orgoglio e sicurezza"
+        //             ],
+        //             "risposta": "Malinconia e angoscia"
+        //         },
+        //         {
+        //             "domanda": "Chi è l'autore del romanzo 'Il fu Mattia Pascal' considerato un capolavoro del Decadentismo?",
+        //             "opzioni": [
+        //                 "Giovanni Pascoli",
+        //                 "Luigi Pirandello",
+        //                 "Italo Svevo",
+        //                 "Gabriele D'Annunzio"
+        //             ],
+        //             "risposta": "Luigi Pirandello"
+        //         },
+        //         {
+        //             "domanda": "Qual è l'atteggiamento nei confronti della realtà materiale nel Decadentismo?",
+        //             "opzioni": [
+        //                 "Celebrazione della concretezza",
+        //                 "Rifiuto della realtà",
+        //                 "Esplorazione razionale",
+        //                 "Accettazione serena"
+        //             ],
+        //             "risposta": "Rifiuto della realtà"
+        //         },
+        //         {
+        //             "domanda": "Quali altri nomi sono associati al movimento decadentista italiano, oltre a Gabriele D'Annunzio?",
+        //             "opzioni": [
+        //                 "Matilde Serao",
+        //                 "Giosuè Carducci",
+        //                 "Luigi Capuana",
+        //                 "Enrico Corradini"
+        //             ],
+        //             "risposta": "Luigi Capuana"
+        //         }
+        //     ]
+        // }
+
+        // const jsonFile = {
+        //     "domande": [
+        //         {
+        //             "domanda": "Quale evento è stato l'evento scatenante della Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "L'attentato di Sarajevo",
+        //                 "La crisi di Cuba",
+        //                 "La Rivoluzione Russa",
+        //                 "La firma del Trattato di Versailles"
+        //             ],
+        //             "risposta": "L'attentato di Sarajevo"
+        //         },
+        //         {
+        //             "domanda": "Quali paesi facevano parte della Triplice Intesa durante la Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "Regno Unito, Francia, Impero Russo",
+        //                 "Germania, Austria-Ungheria, Italia",
+        //                 "Regno Unito, Stati Uniti, Giappone",
+        //                 "Regno Unito, Italia, Giappone"
+        //             ],
+        //             "risposta": "Regno Unito, Francia, Impero Russo"
+        //         },
+        //         {
+        //             "domanda": "Quale paese ha dichiarato guerra per primo nella Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "Austria-Ungheria",
+        //                 "Germania",
+        //                 "Regno Unito",
+        //                 "Serbia"
+        //             ],
+        //             "risposta": "Austria-Ungheria"
+        //         },
+        //         {
+        //             "domanda": "Qual è stato l'evento noto come la 'Battaglia delle Frontiere'?",
+        //             "opzioni": [
+        //                 "Un fallito tentativo di pace",
+        //                 "La prima battaglia tra Germania e Regno Unito",
+        //                 "Una serie di scontri lungo il confine francese-belga",
+        //                 "La caduta di Parigi"
+        //             ],
+        //             "risposta": "Una serie di scontri lungo il confine francese-belga"
+        //         },
+        //         {
+        //             "domanda": "Qual è stato il ruolo di Lawrence d'Arabia durante la Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "Comandante della flotta britannica",
+        //                 "Leader della rivoluzione russa",
+        //                 "Agente britannico che ha supportato la rivolta araba contro l'Impero Ottomano",
+        //                 "Ambasciatore presso la Conferenza di pace di Parigi"
+        //             ],
+        //             "risposta": "Agente britannico che ha supportato la rivolta araba contro l'Impero Ottomano"
+        //         },
+        //         {
+        //             "domanda": "Qual è stato il risultato della Battaglia di Verdun?",
+        //             "opzioni": [
+        //                 "Vittoria decisiva per le forze tedesche",
+        //                 "Incessanti attacchi falliti degli Alleati",
+        //                 "La sconfitta dell'Impero Ottomano",
+        //                 "Pace separata tra Germania e Russia"
+        //             ],
+        //             "risposta": "Incessanti attacchi falliti degli Alleati"
+        //         },
+        //         {
+        //             "domanda": "Qual è stato il nome dato al sistema di trincee che si estendeva attraverso la Francia e il Belgio?",
+        //             "opzioni": [
+        //                 "Linea Maginot",
+        //                 "Linea Hindenburg",
+        //                 "Linea Gustav",
+        //                 "Linea Mannerheim"
+        //             ],
+        //             "risposta": "Linea Hindenburg"
+        //         },
+        //         {
+        //             "domanda": "Chi è stato il leader della Russia durante la maggior parte della Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "Nikita Khrushchev",
+        //                 "Leon Trotsky",
+        //                 "Aleksandr Kerenskij",
+        //                 "Nikolaj II"
+        //             ],
+        //             "risposta": "Nikolaj II"
+        //         },
+        //         {
+        //             "domanda": "Qual è stata l'importanza della Battaglia di Caporetto durante la Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "La vittoria dell'Italia sulle forze austro-ungariche",
+        //                 "La sconfitta delle forze tedesche in Italia",
+        //                 "La caduta di Roma",
+        //                 "La vittoria dell'Impero Ottomano sul fronte balcanico"
+        //             ],
+        //             "risposta": "La sconfitta dell'Italia sulle forze austro-ungariche"
+        //         },
+        //         {
+        //             "domanda": "Quale nazione ha firmato per prima l'armistizio che ha posto fine alla Prima Guerra Mondiale?",
+        //             "opzioni": [
+        //                 "Germania",
+        //                 "Austria-Ungheria",
+        //                 "Regno Unito",
+        //                 "Francia"
+        //             ],
+        //             "risposta": "Austria-Ungheria"
+        //         }
+        //     ]
+        // }
+
+        // const jsonFile = {
+        //     "domande": [
+        //         {
+        //             "domanda": "Qual è la formula chimica generale dei carboidrati?",
+        //             "opzioni": [
+        //                 "C6H12O6",
+        //                 "CH4",
+        //                 "C2H6O",
+        //                 "Cx(H2O)y"
+        //             ],
+        //             "risposta": "Cx(H2O)y"
+        //         },
+        //         {
+        //             "domanda": "Qual è la principale funzione biologica dei carboidrati?",
+        //             "opzioni": [
+        //                 "Fornire energia",
+        //                 "Sostenere la struttura cellulare",
+        //                 "Svolgere funzioni enzimatiche",
+        //                 "Trasportare l'ossigeno"
+        //             ],
+        //             "risposta": "Fornire energia"
+        //         },
+        //         {
+        //             "domanda": "Quale dei seguenti non è un esempio di carboidrato?",
+        //             "opzioni": [
+        //                 "Glucosio",
+        //                 "Amminoacidi",
+        //                 "Cellulosa",
+        //                 "Saccarosio"
+        //             ],
+        //             "risposta": "Amminoacidi"
+        //         },
+        //         {
+        //             "domanda": "Qual è la forma principale di deposito dei carboidrati nei mammiferi?",
+        //             "opzioni": [
+        //                 "Glicogeno",
+        //                 "Amido",
+        //                 "Cellulosa",
+        //                 "Maltosio"
+        //             ],
+        //             "risposta": "Glicogeno"
+        //         },
+        //         {
+        //             "domanda": "Qual è la differenza fondamentale tra gli zuccheri semplici e complessi?",
+        //             "opzioni": [
+        //                 "Gli zuccheri semplici sono costituiti da una singola molecola di zucchero, mentre gli zuccheri complessi sono costituiti da più molecole di zucchero legate tra loro.",
+        //                 "Gli zuccheri semplici sono più dolci degli zuccheri complessi.",
+        //                 "Gli zuccheri complessi sono solubili in acqua, mentre gli zuccheri semplici no.",
+        //                 "Non ci sono differenze tra zuccheri semplici e complessi."
+        //             ],
+        //             "risposta": "Gli zuccheri semplici sono costituiti da una singola molecola di zucchero, mentre gli zuccheri complessi sono costituiti da più molecole di zucchero legate tra loro."
+        //         },
+        //         {
+        //             "domanda": "Qual è il termine corretto per descrivere la forma più semplice di carboidrati?",
+        //             "opzioni": [
+        //                 "Monosaccaridi",
+        //                 "Disaccaridi",
+        //                 "Polisaccaridi",
+        //                 "Complessidi"
+        //             ],
+        //             "risposta": "Monosaccaridi"
+        //         },
+        //         {
+        //             "domanda": "Quale dei seguenti monosaccaridi è una componente fondamentale del DNA?",
+        //             "opzioni": [
+        //                 "Ribosio",
+        //                 "Glucosio",
+        //                 "Fruttosio",
+        //                 "Deossiribosio"
+        //             ],
+        //             "risposta": "Deossiribosio"
+        //         },
+        //         {
+        //             "domanda": "In quali alimenti si trova principalmente il lattosio?",
+        //             "opzioni": [
+        //                 "Frutta",
+        //                 "Latte e derivati",
+        //                 "Verdure a foglia verde",
+        //                 "Carni rosse"
+        //             ],
+        //             "risposta": "Latte e derivati"
+        //         },
+        //         {
+        //             "domanda": "Quale enzima è necessario per la digestione dell'amido nei mammiferi?",
+        //             "opzioni": [
+        //                 "Pepsina",
+        //                 "Lipasi",
+        //                 "Amilasi",
+        //                 "Tripsina"
+        //             ],
+        //             "risposta": "Amilasi"
+        //         },
+        //         {
+        //             "domanda": "Quale tra le seguenti affermazioni è corretta riguardo alla cellulosa?",
+        //             "opzioni": [
+        //                 "È facilmente digeribile dagli esseri umani",
+        //                 "Costituisce la maggior parte della materia organica presente nelle piante",
+        //                 "È una forma di carboidrato monosaccaridico",
+        //                 "È abbondante nei dolcificanti artificiali"
+        //             ],
+        //             "risposta": "Costituisce la maggior parte della materia organica presente nelle piante"
+        //         },
+        //         {
+        //             "domanda": "Qual è il processo attraverso il quale le piante sintetizzano glucosio?",
+        //             "opzioni": [
+        //                 "Fotosintesi",
+        //                 "Respirazione cellulare",
+        //                 "Ossidazione",
+        //                 "Decomposizione"
+        //             ],
+        //             "risposta": "Fotosintesi"
+        //         },
+        //         {
+        //             "domanda": "Qual è il legame presente tra i monosaccaridi nelle catene di polisaccaridi?",
+        //             "opzioni": [
+        //                 "Legame idrogeno",
+        //                 "Legame covalente",
+        //                 "Legame ionico",
+        //                 "Legame metallico"
+        //             ],
+        //             "risposta": "Legame glicosidico"
+        //         },
+        //         {
+        //             "domanda": "Qual è la forma di carboidrato predominante nelle pareti cellulari delle piante?",
+        //             "opzioni": [
+        //                 "Cellulosa",
+        //                 "Glicogeno",
+        //                 "Amido",
+        //                 "Maltosio"
+        //             ],
+        //             "risposta": "Cellulosa"
+        //         },
+        //         {
+        //             "domanda": "Qual è la funzione principale del glucosio nelle cellule?",
+        //             "opzioni": [
+        //                 "Fornire struttura cellulare",
+        //                 "Immagazzinare energia",
+        //                 "Formare le membrane cellulari",
+        //                 "Fornire energia per le reazioni cellulari"
+        //             ],
+        //             "risposta": "Fornire energia per le reazioni cellulari"
+        //         },
+        //         {
+        //             "domanda": "Qual è il prodotto finale della digestione dei carboidrati?",
+        //             "opzioni": [
+        //                 "Aminoacidi",
+        //                 "Monosaccaridi",
+        //                 "Glicerolo",
+        //                 "Glicogeno"
+        //             ],
+        //             "risposta": "Monosaccaridi"
+        //         },
+        //         {
+        //             "domanda": "Qual è la funzione principale del glicogeno nel corpo umano?",
+        //             "opzioni": [
+        //                 "Fornire struttura cellulare",
+        //                 "Immagazzinare energia",
+        //                 "Formare le membrane cellulari",
+        //                 "Fornire energia per le reazioni cellulari"
+        //             ],
+        //             "risposta": "Immagazzinare energia"
+        //         },
+        //         {
+        //             "domanda": "Qual è il termine corretto per un carboidrato costituito da due monosaccaridi?",
+        //             "opzioni": [
+        //                 "Monosaccaridi",
+        //                 "Disaccaridi",
+        //                 "Polisaccaridi",
+        //                 "Complessidi"
+        //             ],
+        //             "risposta": "Disaccaridi"
+        //         },
+        //         {
+        //             "domanda": "Quale degli zuccheri seguenti è comunemente noto come 'zucchero da tavola'?",
+        //             "opzioni": [
+        //                 "Glucosio",
+        //                 "Fruttosio",
+        //                 "Saccarosio",
+        //                 "Lattosio"
+        //             ],
+        //             "risposta": "Saccarosio"
+        //         },
+        //         {
+        //             "domanda": "Quali sono i tre monosaccaridi più comuni?",
+        //             "opzioni": [
+        //                 "Glucosio, Fruttosio, Lattosio",
+        //                 "Glucosio, Fruttosio, Galattosio",
+        //                 "Glucosio, Saccarosio, Maltosio",
+        //                 "Glucosio, Cellulosa, Amido"
+        //             ],
+        //             "risposta": "Glucosio, Fruttosio, Galattosio"
+        //         },
+        //         {
+        //             "domanda": "Quale delle seguenti affermazioni è vera riguardo al saccarosio?",
+        //             "opzioni": [
+        //                 "Si trova principalmente nei latticini",
+        //                 "È comunemente chiamato 'zucchero da latte'",
+        //                 "È un disaccaride composto da glucosio e fruttosio",
+        //                 "È un monosaccaride"
+        //             ],
+        //             "risposta": "È un disaccaride composto da glucosio e fruttosio"
+        //         }
+        //     ]
+        // }
+
+        // const jsonFile = {
+        //     "domande": [
+        //         {
+        //             "domanda": "Qual è il risultato dell'integrale definito di x^2 rispetto a x da 0 a 2?",
+        //             "opzioni": [
+        //                 "4",
+        //                 "8",
+        //                 "6",
+        //                 "2"
+        //             ],
+        //             "risposta": "8"
+        //         },
+        //         {
+        //             "domanda": "Quale è il valore di x per cui la derivata di f(x) = 2x^3 - 3x^2 + 5 è uguale a zero?",
+        //             "opzioni": [
+        //                 "0",
+        //                 "1",
+        //                 "-1",
+        //                 "3/2"
+        //             ],
+        //             "risposta": "1"
+        //         },
+        //         {
+        //             "domanda": "Quale delle seguenti è una soluzione dell'equazione trigonometrica sin(x) = 0?",
+        //             "opzioni": [
+        //                 "π/4",
+        //                 "π/2",
+        //                 "π",
+        //                 "2π"
+        //             ],
+        //             "risposta": "π"
+        //         },
+        //         {
+        //             "domanda": "Quale è la soluzione dell'equazione logaritmica log(x) = 2?",
+        //             "opzioni": [
+        //                 "1",
+        //                 "e",
+        //                 "2",
+        //                 "10"
+        //             ],
+        //             "risposta": "100"
+        //         },
+        //         {
+        //             "domanda": "Qual è la somma dei primi 10 termini della serie aritmetica 3, 7, 11, 15, ...?",
+        //             "opzioni": [
+        //                 "135",
+        //                 "150",
+        //                 "120",
+        //                 "125"
+        //             ],
+        //             "risposta": "120"
+        //         },
+        //         {
+        //             "domanda": "Qual è il valore di x in 3x + 7 = 22?",
+        //             "opzioni": [
+        //                 "5",
+        //                 "6",
+        //                 "7",
+        //                 "8"
+        //             ],
+        //             "risposta": "5"
+        //         },
+        //         {
+        //             "domanda": "Quanto è 5^3?",
+        //             "opzioni": [
+        //                 "125",
+        //                 "150",
+        //                 "100",
+        //                 "25"
+        //             ],
+        //             "risposta": "125"
+        //         },
+        //         {
+        //             "domanda": "Quale è la radice quadrata di 144?",
+        //             "opzioni": [
+        //                 "12",
+        //                 "14",
+        //                 "16",
+        //                 "18"
+        //             ],
+        //             "risposta": "12"
+        //         },
+        //         {
+        //             "domanda": "Qual è il risultato di ∫(2x + 3) dx da 1 a 4?",
+        //             "opzioni": [
+        //                 "24",
+        //                 "30",
+        //                 "16",
+        //                 "14"
+        //             ],
+        //             "risposta": "24"
+        //         },
+        //         {
+        //             "domanda": "Quanto è il seno di 60 gradi?",
+        //             "opzioni": [
+        //                 "√3/2",
+        //                 "1/2",
+        //                 "1",
+        //                 "1/√2"
+        //             ],
+        //             "risposta": "√3/2"
+        //         },
+        //         {
+        //             "domanda": "Qual è il risultato di log10(100)?",
+        //             "opzioni": [
+        //                 "1",
+        //                 "10",
+        //                 "100",
+        //                 "2"
+        //             ],
+        //             "risposta": "2"
+        //         },
+        //         {
+        //             "domanda": "Quale delle seguenti equazioni rappresenta una parabola?",
+        //             "opzioni": [
+        //                 "y = 2x + 3",
+        //                 "x = y^2 + 1",
+        //                 "y = x^3 - 4x",
+        //                 "x = 4"
+        //             ],
+        //             "risposta": "y = x^2 + 1"
+        //         },
+        //         {
+        //             "domanda": "Qual è la soluzione di x^2 - 5x + 6 = 0?",
+        //             "opzioni": [
+        //                 "x = 2, x = 3",
+        //                 "x = 4, x = 5",
+        //                 "x = 1, x = 6",
+        //                 "x = 3, x = 4"
+        //             ],
+        //             "risposta": "x = 2, x = 3"
+        //         },
+        //         {
+        //             "domanda": "Qual è il valore del coefficiente binomiale (n su k) se n = 5 e k = 2?",
+        //             "opzioni": [
+        //                 "5",
+        //                 "10",
+        //                 "15",
+        //                 "20"
+        //             ],
+        //             "risposta": "10"
+        //         },
+        //         {
+        //             "domanda": "Quale è la derivata di sin(x)?",
+        //             "opzioni": [
+        //                 "cos(x)",
+        //                 "tan(x)",
+        //                 "cot(x)",
+        //                 "sec(x)"
+        //             ],
+        //             "risposta": "cos(x)"
+        //         },
+        //         {
+        //             "domanda": "Quanto è l'area di un cerchio con raggio 5?",
+        //             "opzioni": [
+        //                 "25π",
+        //                 "50π",
+        //                 "100π",
+        //                 "125π"
+        //             ],
+        //             "risposta": "25π"
+        //         },
+        //         {
+        //             "domanda": "Qual è il valore assoluto di -8?",
+        //             "opzioni": [
+        //                 "8",
+        //                 "0",
+        //                 "-8",
+        //                 "16"
+        //             ],
+        //             "risposta": "8"
+        //         },
+        //         {
+        //             "domanda": "Quanto è la somma degli angoli interni di un esagono?",
+        //             "opzioni": [
+        //                 "360 gradi",
+        //                 "540 gradi",
+        //                 "720 gradi",
+        //                 "900 gradi"
+        //             ],
+        //             "risposta": "720 gradi"
+        //         },
+        //         {
+        //             "domanda": "Quale dei seguenti numeri è un numero primo?",
+        //             "opzioni": [
+        //                 "21",
+        //                 "27",
+        //                 "29",
+        //                 "35"
+        //             ],
+        //             "risposta": "29"
+        //         },
+        //         {
+        //             "domanda": "Quale è la soluzione dell'equazione esponenziale 2^x = 16?",
+        //             "opzioni": [
+        //                 "2",
+        //                 "4",
+        //                 "8",
+        //                 "16"
+        //             ],
+        //             "risposta": "4"
+        //         }
+        //     ]
+        // }
+
+        const jsonFile = {
+            "domande": [
+                {
+                    "domanda": "Cosa rappresenta l'acronimo NAT nel contesto delle reti informatiche?",
+                    "opzioni": [
+                        "Network Access Terminal",
+                        "Network Address Translation",
+                        "Network Attached Technology",
+                        "Network Authentication Tool"
+                    ],
+                    "risposta": "Network Address Translation"
+                },
+                {
+                    "domanda": "Qual è uno dei principali scopi del Protocollo NAT nelle reti informatiche?",
+                    "opzioni": [
+                        "Aumentare la velocità di trasmissione dei dati",
+                        "Sicurezza dei dati",
+                        "Consentire la connettività tra reti eterogenee",
+                        "Gestire le connessioni wireless"
+                    ],
+                    "risposta": "Consentire la connettività tra reti eterogenee"
+                },
+                {
+                    "domanda": "In quale strato del modello OSI opera il Protocollo NAT?",
+                    "opzioni": [
+                        "Strato Fisico",
+                        "Strato di Rete",
+                        "Strato Applicativo",
+                        "Strato di Collegamento dati"
+                    ],
+                    "risposta": "Strato di Rete"
+                },
+                {
+                    "domanda": "Qual è il compito principale del Protocollo NAT?",
+                    "opzioni": [
+                        "Mappare indirizzi IP pubblici su indirizzi IP privati",
+                        "Criptare i dati trasmessi",
+                        "Controllare l'accesso alla rete",
+                        "Modificare i pacchetti dati"
+                    ],
+                    "risposta": "Mappare indirizzi IP pubblici su indirizzi IP privati"
+                },
+                {
+                    "domanda": "Cosa si intende per indirizzo IP privato nel contesto del NAT?",
+                    "opzioni": [
+                        "Indirizzo IP assegnato a un router",
+                        "Indirizzo IP assegnato a un server DNS",
+                        "Indirizzo IP non accessibile direttamente su Internet",
+                        "Indirizzo IP connesso a un server web"
+                    ],
+                    "risposta": "Indirizzo IP non accessibile direttamente su Internet"
+                },
+                {
+                    "domanda": "Qual è il vantaggio principale dell'utilizzo del Protocollo NAT?",
+                    "opzioni": [
+                        "Aumento della velocità di connessione",
+                        "Riduzione della complessità della rete",
+                        "Miglioramento della sicurezza della rete",
+                        "Espansione degli indirizzi IP pubblici"
+                    ],
+                    "risposta": "Miglioramento della sicurezza della rete"
+                },
+                {
+                    "domanda": "Quali tipi di NAT sono comuni nelle reti informatiche?",
+                    "opzioni": [
+                        "NAT Statico, NAT Dinamico, NAT di Overload",
+                        "NAT Aperto, NAT Chiuso, NAT Moderato",
+                        "NAT Singolo, NAT Multiplo, NAT Doppio",
+                        "NAT Primario, NAT Secondario, NAT Tertiaro"
+                    ],
+                    "risposta": "NAT Statico, NAT Dinamico, NAT di Overload"
+                },
+                {
+                    "domanda": "Quale modalità di NAT consente a più indirizzi IP privati di essere mappati su un singolo indirizzo IP pubblico?",
+                    "opzioni": [
+                        "NAT Statico",
+                        "NAT Dinamico",
+                        "NAT di Overload",
+                        "NAT Uni-direzionale"
+                    ],
+                    "risposta": "NAT di Overload"
+                },
+                {
+                    "domanda": "Qual è il nome dell'indirizzo IP utilizzato per identificare la propria rete locale all'esterno della rete Internet?",
+                    "opzioni": [
+                        "Indirizzo IP globale",
+                        "Indirizzo IP privato",
+                        "Indirizzo IP pubblico",
+                        "Indirizzo IP locale"
+                    ],
+                    "risposta": "Indirizzo IP pubblico"
+                },
+                {
+                    "domanda": "Cosa significa la sigla PAT in relazione al NAT?",
+                    "opzioni": [
+                        "Port Address Translation",
+                        "Private Address Translation",
+                        "Public Address Transfer",
+                        "Ported Address Technology"
+                    ],
+                    "risposta": "Port Address Translation"
+                },
+                {
+                    "domanda": "Qual è il termine utilizzato per identificare la combinazione di indirizzo IP e numero di porta utilizzati per trasmettere dati all'interno di una rete?",
+                    "opzioni": [
+                        "Porta di accesso",
+                        "IP Socket",
+                        "Porta di Ingresso",
+                        "Punto di connessione"
+                    ],
+                    "risposta": "IP Socket"
+                },
+                {
+                    "domanda": "Qual è la differenza principale tra NAT Dinamico e NAT Statico?",
+                    "opzioni": [
+                        "NAT Dinamico cambia l'indirizzo IP pubblico ogni volta che un dispositivo si connette, mentre NAT Statico assegna sempre lo stesso IP pubblico",
+                        "NAT Statico è più sicuro di NAT Dinamico",
+                        "NAT Dinamico è utilizzato solo in reti aziendali, mentre NAT Statico è per uso domestico",
+                        "NAT Dinamico non richiede un router, mentre NAT Statico lo richiede"
+                    ],
+                    "risposta": "NAT Dinamico cambia l'indirizzo IP pubblico ogni volta che un dispositivo si connette, mentre NAT Statico assegna sempre lo stesso IP pubblico"
+                },
+                {
+                    "domanda": "Cosa implica l'esaurimento degli indirizzi IP pubblici?",
+                    "opzioni": [
+                        "La mancanza di spazio per nuovi indirizzi IP",
+                        "Il sovraffollamento della rete",
+                        "La velocità ridotta della connessione",
+                        "La necessità di utilizzare solo indirizzi IP privati"
+                    ],
+                    "risposta": "La mancanza di spazio per nuovi indirizzi IP"
+                },
+                {
+                    "domanda": "In una rete domestica, quale dispositivo è spesso responsabile dell'implementazione del NAT?",
+                    "opzioni": [
+                        "Modem",
+                        "Router",
+                        "Firewall",
+                        "Server"
+                    ],
+                    "risposta": "Router"
+                },
+                {
+                    "domanda": "Qual è l'effetto del NAT sulle prestazioni della rete?",
+                    "opzioni": [
+                        "Aumenta la velocità della rete",
+                        "Riduce la larghezza di banda",
+                        "Non ha alcun impatto sulle prestazioni",
+                        "Migliora la sicurezza della rete"
+                    ],
+                    "risposta": "Non ha alcun impatto sulle prestazioni"
+                },
+                {
+                    "domanda": "Quale tipo di indirizzo IP è associato ai dispositivi all'interno di una rete domestica, in termini di NAT?",
+                    "opzioni": [
+                        "Indirizzo IP privato",
+                        "Indirizzo IP pubblico",
+                        "Indirizzo IP locale",
+                        "Indirizzo IP statico"
+                    ],
+                    "risposta": "Indirizzo IP privato"
+                },
+                {
+                    "domanda": "Come influisce il NAT sulla sicurezza della rete?",
+                    "opzioni": [
+                        "Rende la rete più vulnerabile agli attacchi",
+                        "Aumenta la probabilità di infezioni da virus",
+                        "Migliora la sicurezza attraverso la mascheratura degli indirizzi IP",
+                        "Non ha alcun impatto sulla sicurezza della rete"
+                    ],
+                    "risposta": "Migliora la sicurezza attraverso la mascheratura degli indirizzi IP"
+                },
+                {
+                    "domanda": "Perché il Protocollo NAT è considerato una soluzione temporanea per l'esaurimento degli indirizzi IPv4?",
+                    "opzioni": [
+                        "Non risolve il problema dell'esaurimento degli indirizzi",
+                        "Richiede costanti aggiornamenti",
+                        "Ha bisogno di hardware costoso",
+                        "IPv6 è destinato a sostituirlo in futuro"
+                    ],
+                    "risposta": "IPv6 è destinato a sostituirlo in futuro"
+                },
+                {
+                    "domanda": "Quale impatto ha il NAT su applicazioni che richiedono connessioni peer-to-peer?",
+                    "opzioni": [
+                        "Le rende più veloci",
+                        "Le rende più complesse",
+                        "Le rende impossibili",
+                        "Non ha impatto su tali applicazioni"
+                    ],
+                    "risposta": "Le rende più complesse"
+                }
+            ]
+        }

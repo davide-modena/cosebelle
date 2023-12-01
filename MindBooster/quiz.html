@@ -13,7 +13,8 @@
     <div class="quiz-container">
 
         <div class="options">
-            <textarea name="jsonArea" id="jsonArea" style="width: 100%; font-size: 2em; padding: 1rem;" placeholder="Incolla il JSON..."></textarea>
+            <textarea name="jsonArea" id="jsonArea" style="width: 100%; font-size: 2em; padding: 1rem;"
+                placeholder="Incolla il JSON..."></textarea>
         </div>
         <div class="buttons centered">
             <button id="backBtn">Indietro</button>
@@ -32,6 +33,7 @@
         let questions = [];
         let i = 0;
         let options = "";
+        let answer = "";
 
         function changeQuestion(i) {
             question.innerHTML = questions[i].domanda;
@@ -61,11 +63,14 @@
 
         function correction(esito) {
             let correction = "<div class='esito'";
-            if (esito) {
-                correction += " style='background-color: #278f0e'>CORRETTO!"
+            if (esito == 'corretta') {
+                correction += " style='background-color: #278f0e'>CORRETTO!";
+            }
+            else if (esito == 'skippata') {
+                correction += " style='background-color: #d89e01'>SKIPPATO!";
             }
             else {
-                correction += " style='background-color: #e21a3b'>ERRATO!"
+                correction += " style='background-color: #e21a3b'>ERRATO!";
             }
             correction += "</div>";
             optionsContainer.innerHTML = correction;
@@ -93,10 +98,13 @@
                         i = questions.length - 1;
                     }
                     if (answer == questions[i].risposta) {
-                        correction(true);
+                        correction('corretta');
+                    }
+                    else if (answer == "") {
+                        correction('skippata');
                     }
                     else {
-                        correction(false);
+                        correction('errata');
                     }
                     i++;
                 }

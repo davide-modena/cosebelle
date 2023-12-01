@@ -72,7 +72,7 @@
 
             const result = document.getElementById('result');
 
-            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione.`;
+            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni.`;
 
             result.innerHTML = prompt;
         }

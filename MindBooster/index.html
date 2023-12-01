@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- <h1 style="font-size: 4em; color: white; margin-bottom: 1em;">Genera prompt</h1> -->
     <!-- <form class="type-1">
         <select name="subjects" id="subjects">
             <option value="storia">Storia</option>
@@ -34,15 +35,16 @@
             <option value="università">Università</option>
         </select>
     </form> -->
-    <form class="type-2">
+    <form class="type-2 centered">
         <input type="text" name="subjects" id="subjects" placeholder="Materia...">
         <input type="text" name="topics" id="topics" placeholder="Argomento...">
         <input type="text" name="questions" id="questions" placeholder="Tipo domande..." value="Quiz">
         <input type="number" min="0" name="quantity" id="quantity" placeholder="Inserisci la quantità...">
         <input type="text" name="level" id="level" placeholder="Livello..." value="Superiori">
     </form>
-    <button onclick="generatePrompt()">Genera</button>
+    <button onclick="generatePrompt()">Genera prompt</button>
     <div id="result" onclick="copyToClipboard(this.innerHTML)"></div>
+    <a target="_blank" href="quiz.html">Entra nel Quiz!</a>
 
     <!-- <textarea name="jsonArea" id="jsonArea" cols="30" rows="10" placeholder="Metti il JSON qui"></textarea>
     <button id="sendBtn" onclick="sendToPage()">Manda</button> -->
@@ -60,9 +62,17 @@
                 quantity = 10;
             }
 
+            if (subjects == ""){
+                subjects = "Storia";
+            }
+
+            if (topics == ""){
+                topics = "Prima Guerra Mondiale"
+            }
+
             const result = document.getElementById('result');
 
-            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento "${topics}" di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda, le opzioni e la risposta giusta. Fai in modo che la risposta giusta non sia sempre la prima opzione.`;
+            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione.`;
 
             result.innerHTML = prompt;
         }

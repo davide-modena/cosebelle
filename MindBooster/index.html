@@ -38,7 +38,11 @@
     <form class="type-2 centered">
         <!-- <input type="text" name="subjects" id="subjects" placeholder="Materia..."> -->
         <input type="text" name="topics" id="topics" placeholder="Argomento...">
-        <input type="text" name="questions" id="questions" placeholder="Tipo domande..." value="Quiz">
+        <!-- <input type="text" name="questions" id="questions" placeholder="Tipo domande..." value="Quiz"> -->
+        <select name="questions" id="questions">
+            <option value="quiz">Quiz</option>
+            <option value="vero o falso">Vero o falso</option>
+        </select>
         <input type="number" min="0" name="quantity" id="quantity" placeholder="Inserisci la quantità...">
         <input type="text" name="level" id="level" placeholder="Livello..." value="Superiori">
     </form>
@@ -74,7 +78,7 @@
 
             // prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni.`;
 
-            prompt = `Fammi ${quantity} domande di sull'argomento "${topics}" di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni. Non usare le doppie virgolette negli argomenti, perché danno problemi al JSON.`;
+            prompt = `Fammi ${quantity} domande di sull'argomento "${topics}" di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni", 4 per il quiz, 2 per il vero o falso) e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni. Non usare le doppie virgolette negli argomenti, perché danno problemi al JSON.`;
 
             result.innerHTML = prompt;
         }

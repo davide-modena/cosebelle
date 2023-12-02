@@ -43,6 +43,10 @@ select, input{
     max-width: 100%;
 }
 
+select, input {
+    width: 100%;
+}
+
 button{
     background: #864cbf;
     color: white;

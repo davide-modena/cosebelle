@@ -36,7 +36,7 @@
         </select>
     </form> -->
     <form class="type-2 centered">
-        <input type="text" name="subjects" id="subjects" placeholder="Materia...">
+        <!-- <input type="text" name="subjects" id="subjects" placeholder="Materia..."> -->
         <input type="text" name="topics" id="topics" placeholder="Argomento...">
         <input type="text" name="questions" id="questions" placeholder="Tipo domande..." value="Quiz">
         <input type="number" min="0" name="quantity" id="quantity" placeholder="Inserisci la quantità...">
@@ -52,7 +52,7 @@
     <script>
         function generatePrompt() {
             let prompt = "";
-            let subjects = document.getElementById('subjects').value;
+            // let subjects = document.getElementById('subjects').value;
             let topics = document.getElementById('topics').value;
             let questions = document.getElementById('questions').value;
             let quantity = document.getElementById('quantity').value;
@@ -62,9 +62,9 @@
                 quantity = 10;
             }
 
-            if (subjects == ""){
-                subjects = "Storia";
-            }
+            // if (subjects == ""){
+            //     subjects = "Storia";
+            // }
 
             if (topics == ""){
                 topics = "Prima Guerra Mondiale"
@@ -72,7 +72,9 @@
 
             const result = document.getElementById('result');
 
-            prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni.`;
+            // prompt = `Fammi ${quantity} domande di ${subjects} sull'argomento ${topics} di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni.`;
+
+            prompt = `Fammi ${quantity} domande di sull'argomento "${topics}" di livello ${level}. Il tipo di domande è: ${questions}. Organizza queste domande in un JSON con un array chiamato "domande", indicando la domanda ("domanda"), le opzioni ("opzioni") e la risposta giusta ("risposta"). Fai in modo che la risposta giusta non sia sempre la prima opzione. Verifica che la risposta giusta sia presente tra le opzioni. Non usare le doppie virgolette negli argomenti, perché danno problemi al JSON.`;
 
             result.innerHTML = prompt;
         }

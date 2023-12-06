@@ -61,16 +61,22 @@
             sendBtn.innerHTML = "Invia";
         }
 
+        var correctAudio = new Audio('sounds/correct.wav');
+        var wrongAudio = new Audio('sounds/wrong.wav');
+
         function correction(esito) {
             let correction = "<div class='esito'";
             if (esito == 'corretta') {
                 correction += " style='background-color: #278f0e'>CORRETTO!";
+                correctAudio.play();                
             }
             else if (esito == 'skippata') {
                 correction += " style='background-color: #d89e01'>SKIPPATO!";
+                wrongAudio.play();
             }
             else {
                 correction += " style='background-color: #e21a3b'>ERRATO!";
+                wrongAudio.play();
             }
             correction += "</div>";
             optionsContainer.innerHTML = correction;

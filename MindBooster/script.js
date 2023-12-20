@@ -2,14 +2,17 @@ const { TextServiceClient } = require("@google-ai/generativelanguage");
 const { GoogleAuth } = require("google-auth-library");
 
 const MODEL_NAME = "models/text-bison-001";
-const API_KEY = "";
+const API_KEY = "AIzaSyCF3K2X6VNKv_2qPecRRW3tJt9GtcHGtxI";
 
 const client = new TextServiceClient({
   authClient: new GoogleAuth().fromAPIKey(API_KEY),
 });
 
-const promptString = `Give me 10 questions on the topic of 'computer science' at an advanced level. The question type is: quiz. Organize these questions into a JSON with an array named 'domande', indicating the question ('domanda'), the options ('opzioni', 4 for the quiz, 2 for true or false), and the correct answer ('risposta'). Ensure that the correct answer is not always the first option. Verify that the correct answer is present among the options. Avoid using double quotes in the arguments as they cause issues in JSON. Create a JSON in Italian.`;
+const promptString = `Ask me 10 questions about "Kanye" at a medium level. The question type is: quiz. Organize these questions in a JSON with an array called "questions", indicating the question ("question"), options ("options", 4 for the quiz, 2 for the true or false) and the right answer ("answer"). Make sure that the right answer is not always the first option. Make sure that the right answer is present in the options. Do not use double quotes in arguments, because they give problems to the JSON.`;
 const stopSequences = [];
+let jsonFile;
+
+console.log('prompt: ',promptString)
 
 client.generateText({
   // required, which model to use to generate the result
@@ -32,5 +35,9 @@ client.generateText({
     text: promptString,
   },
 }).then(result => {
-  console.log(JSON.stringify(result, null, 2));
+  jsonFile = JSON.stringify(result, null, 2);
+  jsonFile = JSON.parse(jsonFile);
+  output = jsonFile[0].candidates[0].output;
+  console.log(output);
 });
+
